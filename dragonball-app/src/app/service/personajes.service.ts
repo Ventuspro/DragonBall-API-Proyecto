@@ -22,18 +22,9 @@ export class PersonajesService {
 ShowData(personaje: personaje) {
     document.body.style.overflow = 'hidden'
 
-
-
-
     let overlay = document.createElement('div')
     let modal = document.createElement('div')
-
-
-
     overlay.className="overlay"
-
-
-
     modal.className="modal"
 
     let id = document.createElement('p')
@@ -62,18 +53,7 @@ ShowData(personaje: personaje) {
     img.className = "modal-img"
 
 
-    modal.append(
-      id,
-      name,
-      ki,
-      maxKi,
-      race,
-      gender,
-      description,
-      affiliation,
-      apiKey,
-      img
-    )
+    modal.append(id,name,ki,maxKi,race,gender,description,affiliation,apiKey,img)
 
 
     overlay.appendChild(modal)

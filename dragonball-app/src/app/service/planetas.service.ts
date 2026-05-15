@@ -40,21 +40,9 @@ export class PlanetasService {
     img.className="modal-img"
     img.src = `${planeta.image}`
 
-
-
-
-    modal.append(
-      id,
-      name,
-      isDestroyed,
-      description,
-      apiKey,
-      img
-    )
-
+    modal.append(id,name,isDestroyed,description,apiKey,img)
 
     overlay.appendChild(modal)
-
 
     document.body.appendChild(overlay)
 
