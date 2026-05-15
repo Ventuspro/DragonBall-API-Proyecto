@@ -47,20 +47,9 @@ private http = inject(HttpClient)
 
 
 
-    modal.append(
-      id,
-      name,
-      ki,
-      apiKey,
-      img,
-    )
-
-
+    modal.append(id,name,ki,apiKey,img,)
     overlay.appendChild(modal)
-
-    
     document.body.appendChild(overlay)
-    
     overlay.addEventListener('click', () => {
     document.body.style.overflow = 'auto'
     overlay.remove()})
