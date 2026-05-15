@@ -28,21 +28,14 @@ ShowData(personaje: personaje) {
     let overlay = document.createElement('div')
     let modal = document.createElement('div')
 
-    overlay.style.position = 'fixed'
-    overlay.style.top = '0'
-    overlay.style.left = '0'
-    overlay.style.width = '100%'
-    overlay.style.height = '100%'
-    overlay.style.backgroundColor = 'rgba(0,0,0,0.8)'
-    overlay.style.display = 'flex'
-    overlay.style.justifyContent = 'center'
-    overlay.style.alignItems = 'center'
-    overlay.style.zIndex = '9999'
 
-    modal.style.backgroundColor = 'white'
-    modal.style.padding = '20px'
-    modal.style.borderRadius = '10px'
-    modal.style.width = '50%'
+
+    overlay.className="overlay"
+
+
+
+    modal.className="modal"
+
     let id = document.createElement('p')
     let name = document.createElement('p')
     let ki = document.createElement('p')
@@ -65,11 +58,8 @@ ShowData(personaje: personaje) {
     affiliation.innerText = `Afiliación: ${personaje.affiliation}`
     apiKey.innerText = `ApiKey: ${JSON.stringify(this.characters().find((p) =>  personaje.id===p.id))}`
     img.src =`${personaje.image}`
-    img.style.display="block"
-    img.style.width="400px"
-    img.style.height="400px"
-    img.style.margin="auto"
 
+    img.className = "modal-img"
 
 
     modal.append(

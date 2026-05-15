@@ -23,21 +23,8 @@ export class PlanetasService {
     let overlay = document.createElement('div')
     let modal = document.createElement('div')
 
-    overlay.style.position = 'fixed'
-    overlay.style.top = '0'
-    overlay.style.left = '0'
-    overlay.style.width = '100%'
-    overlay.style.height = '100%'
-    overlay.style.backgroundColor = 'rgba(0,0,0,0.5)'
-    overlay.style.display = 'flex'
-    overlay.style.justifyContent = 'center'
-    overlay.style.alignItems = 'center'
-    overlay.style.zIndex = '9999'
-
-    modal.style.backgroundColor = 'white'
-    modal.style.padding = '20px'
-    modal.style.borderRadius = '10px'
-    modal.style.width = '50%'
+    modal.className="modal"
+    overlay.className="overlay"
     let id = document.createElement('p')
     let name = document.createElement('p')
     let isDestroyed = document.createElement('p')
@@ -50,11 +37,8 @@ export class PlanetasService {
     isDestroyed.innerText = `Esta destruido: ${planeta.isDestroyed}`
     description.innerText = `Descripción: ${planeta.description}`
     apiKey.innerText = `ApiKey: ${JSON.stringify(this.planetas().find(p => p.id === planeta.id))}`
+    img.className="modal-img"
     img.src = `${planeta.image}`
-    img.style.display = "block"
-    img.style.width = "600px"
-    img.style.height = "600px"
-    img.style.margin = "auto"
 
 
 

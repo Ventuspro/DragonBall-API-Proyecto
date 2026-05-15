@@ -22,21 +22,9 @@ private http = inject(HttpClient)
     let overlay = document.createElement('div')
     let modal = document.createElement('div')
 
-    overlay.style.position = 'fixed'
-    overlay.style.top = '0'
-    overlay.style.left = '0'
-    overlay.style.width = '100%'
-    overlay.style.height = '100%'
-    overlay.style.backgroundColor = 'rgba(0,0,0,0.5)'
-    overlay.style.display = 'flex'
-    overlay.style.justifyContent = 'center'
-    overlay.style.alignItems = 'center'
-    overlay.style.zIndex = '9999'
+    overlay.className="overlay"
+    modal.className="modal"
 
-    modal.style.backgroundColor = 'white'
-    modal.style.padding = '20px'
-    modal.style.borderRadius = '10px'
-    modal.style.width = '50%'
     let id = document.createElement('p')
     let name = document.createElement('p')
     let ki = document.createElement('p')
@@ -52,11 +40,9 @@ private http = inject(HttpClient)
     name.innerText = `Nombre: ${trans.name}`
     ki.innerText = `Ki: ${trans.ki}`
     apiKey.innerText = `ApiKey: ${JSON.stringify(this.transformaciones().find(p =>  p.id===trans.id))}`
+    img.className="modal-img"
     img.src =`${trans.image}`
-    img.style.display="block"
-    img.style.width="500px"
-    img.style.height="500px"
-    img.style.margin="auto"
+    
 
 
 
