@@ -1,0 +1,10 @@
+<a routerLink="/characters"><img src="DragonBall.ico" alt=""></a> 
+<nav>
+    
+    <input id="buscador" autocomplete="false" type="text" placeholder="Buscador" class="buscador" (keyup.enter)="buscador.Search(buscadorInput.value); Navegador(); buscadorInput.value='' " #buscadorInput>
+    <a routerLink="/affiliation" routerLinkActive="active">Afiliación</a>
+    <a routerLink="/planets" routerLinkActive="active">Planetas</a>
+    <a routerLink="/characters" routerLinkActive="active">Personajes</a>
+    <a routerLink="/transformations" routerLinkActive="active">Transformaciones</a>
+    <a routerLink="/favourites" routerLinkActive="active">Favoritos</a>
+</nav>

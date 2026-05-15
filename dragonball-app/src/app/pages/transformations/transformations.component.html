@@ -1,0 +1,8 @@
+<div class="contenedor">
+  @for (trans of service.transformaciones(); track trans.id) {
+  <div class="transformaciones" (click)="service.ShowData(trans)"
+    (contextmenu)="favoritos.GuardarEnFavoritos($event,trans)">
+    <img [src]="trans.image">
+  </div>
+  }
+</div>

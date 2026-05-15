@@ -1,0 +1,31 @@
+<input id="boton" type="button" value="Ordenar por {{palBoton()}}" class="raza" (click)="cambiarOrden()">
+
+<div class="contenedor">
+
+  @let lista = personajes();
+  @if (ordenPor() === "afiliacion") {
+  @for (personaje of lista; track personaje.id; let i = $index) {
+
+  @if (i == 0 || personaje.affiliation != lista[i - 1].affiliation) {
+  <h1>{{ personaje.affiliation }}</h1>
+  }
+
+  <div class="personajes" (click)="serviceChar.ShowData(personaje)" (contextmenu)="favoritos.GuardarEnFavoritos($event,personaje)">
+    <img [src]="personaje.image">
+  </div>
+  }
+  }
+  @else{
+  @for (personaje of lista; track personaje.id; let i = $index) {
+  
+    @if (i == 0 || personaje.race != lista[i - 1].race) {
+  <h1>{{ personaje.race }}</h1>
+  }
+
+  <div class="personajes" (click)="serviceChar.ShowData(personaje)" (contextmenu)="favoritos.GuardarEnFavoritos($event,personaje)">
+    <img [src]="personaje.image">
+  </div>
+  }
+  }
+
+</div>

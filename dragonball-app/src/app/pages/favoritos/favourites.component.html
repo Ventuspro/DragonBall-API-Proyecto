@@ -1,0 +1,18 @@
+<div class="contenedor">
+  <h1>Guardados como favoritos:</h1>
+  @for (personaje of favoritos.listaPersonaje(); track personaje.id) {
+  <div class="personajes" (click)="buscador.ShowData(personaje)" (contextmenu)="favoritos.BorrarFavorito($event,personaje)">
+  <img [src]="personaje.image">
+  </div>
+}
+  @for (trans of favoritos.listaTransformacion(); track trans.id) {
+  <div class="transformaciones" (click)="buscador.ShowData(trans)" (contextmenu)="favoritos.BorrarFavorito($event,trans)">
+  <img [src]="trans.image">
+  </div>
+}
+@for (planet of favoritos.listaPlanetas(); track planet.id) {
+  <div class="planetas" (click)="buscador.ShowData(planet)" (contextmenu)="favoritos.BorrarFavorito($event,planet)">
+  <img [src]="planet.image">
+  </div>
+}
+</div>

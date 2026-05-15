@@ -1,0 +1,37 @@
+    nav{
+        display: flex;
+        justify-content: space-around;
+        background-color: darkblue;
+        color: white;
+        padding: 10px;
+    }
+nav a {
+    color: white;
+    text-decoration:overline;
+}
+nav a:hover{
+    color: coral;
+    text-decoration: none;
+}
+nav a.active{
+    color: lightgreen;
+    text-decoration: underline;
+}
+.buscador{
+    border: solid grey 1px;
+}
+img {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    left: 1%;
+}
+#buscador{
+  border: 2px solid black;
+  border-radius: 8px;
+  outline: none;
+  background-color: black;
+  color: lightcoral;
+  box-shadow: 3px 3px 0px #000;
+}

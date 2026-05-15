@@ -1,0 +1,9 @@
+<div class="contenedor">
+
+
+@for (personaje of service.characters(); track personaje.id) {
+  <div class="personajes"(click)="service.ShowData(personaje)"(contextmenu)="favoritos.GuardarEnFavoritos($event,personaje)">
+  <img [src]="personaje.image">
+  </div>
+}
+</div>

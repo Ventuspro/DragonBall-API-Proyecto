@@ -1,0 +1,7 @@
+<div class="contenedor">
+@for (planet of service.planetas(); track planet.id) {
+  <div class="planetas" (click)="service.ShowData(planet)" (contextmenu)="favoritos.GuardarEnFavoritos($event,planet)">
+  <img [src]="planet.image">
+  </div>
+}
+</div>

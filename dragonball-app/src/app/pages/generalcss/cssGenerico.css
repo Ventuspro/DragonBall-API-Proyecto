@@ -1,0 +1,62 @@
+html, body{
+  height: 100%;
+  width: 100%; 
+}
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 400px);
+  gap: 15px;
+  justify-content: center;
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: lightblue; 
+} 
+
+.contenedor .transformaciones {
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  border: 3px solid red;
+  display: flex;
+  background-color: black;
+  
+}
+
+.contenedor .planetas {
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  border: 3px solid green;
+  display: flex;
+}
+
+.contenedor .personajes {
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  border: 3px solid purple;
+  display: flex;
+  background-color: black;
+}
+
+.contenedor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center 10%;
+}
+h1{
+  grid-column: span 4;
+  justify-content: center;
+  font-size: xx-large;
+  color: crimson;
+}
+
+.raza {
+  display: block;
+  margin: 20px 0 0 auto;
+  width: 250px;
+
+}

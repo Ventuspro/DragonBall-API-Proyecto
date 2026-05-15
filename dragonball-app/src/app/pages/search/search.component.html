@@ -1,0 +1,20 @@
+<div class="contenedor">
+  <h1>Resultados con: {{buscador.searchInfo}}</h1>
+  @for (personaje of buscador.resultadoPersonajes(); track personaje.id) {
+  <div class="personajes" (click)="buscador.ShowData(personaje)">
+  <img [src]="personaje.image">
+  </div>
+}
+
+
+  @for (trans of buscador.resultadoTransformaciones(); track trans.id) {
+  <div class="transformaciones" (click)="buscador.ShowData(trans)">
+  <img [src]="trans.image">
+  </div>
+}
+@for (planet of buscador.resultadoPlanetas(); track planet.id) {
+  <div class="planetas" (click)="buscador.ShowData(planet)">
+  <img [src]="planet.image">
+  </div>
+}
+</div>
